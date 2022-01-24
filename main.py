@@ -11,7 +11,7 @@ def main():
     create_db()    
     #search('table')
     #list_user_products(2)
-    #list_products_per_tag(2)
+    #list_products_per_tag(3)
     #add_product_to_catalog(2,[{'name':'psp','owner_id':2,'description':'a handheld gaming console','price_per_unit':200,'quantity':2}])
     #update_stock(3,10)
     #remove_product(1)
