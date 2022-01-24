@@ -1,2 +1,5 @@
 name,owner_id,description,price_per_unit,quantity
 Iphone 13 pro,1,The latest iphone,1000,1
+tv,1, a new tv ,500,5
+dinnertable,2, a new dinner table,200,2
+oranges,2,2 euro per kilo quantity in kilos,2,100
