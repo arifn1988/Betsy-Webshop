@@ -9,16 +9,16 @@ import os
 
 def main():
     create_db()    
-    search('phone')
-    #list_user_products(1)
-    #list_products_per_tag(1)
+    #search('table')
+    #list_user_products(2)
+    #list_products_per_tag(2)
     #add_product_to_catalog(2,[{'name':'psp','owner_id':2,'description':'a handheld gaming console','price_per_unit':200,'quantity':2}])
-    #update_stock(2,10)
+    #update_stock(3,10)
     #remove_product(1)
     #purchase_product(1,2,1)
 
 def search(term): 
-    for item in m.Product.select(m.Product.name).dicts():
+    for item in m.Product.select(m.Product.name,m.Product.description).dicts():
         if(term.lower() in item['name'].lower() or term.lower() in item['description']):
             print(item)
 
@@ -42,6 +42,8 @@ def add_product_to_catalog(user_id, product):
 
 def update_stock(product_id, new_quantity):
     m.Product.update({m.Product.quantity : new_quantity}).where(m.Product.id==product_id).execute()
+
+    print(m.Product.select().where(product_id==m.Product.id).dicts().get())
 
 def purchase_product(product_id, buyer_id, quantity):
      
